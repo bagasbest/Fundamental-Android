@@ -14,7 +14,8 @@ class MyFragmentAppCategoryFragment : Fragment(), View.OnClickListener {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View? {
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_my_app_category, container, false)
     }
@@ -26,8 +27,31 @@ class MyFragmentAppCategoryFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onClick(view: View) {
-        if(view.id == R.id.btn_detail_category) {
+        if (view.id == R.id.btn_detail_category) {
+            val mDetailCategoryFragment = MyFragmentAppDetailCategoryFragment()
 
+
+            val mBundle = Bundle()
+
+            mBundle.putString(MyFragmentAppDetailCategoryFragment.EXTRA_NAME, "LifeStyle")
+            mBundle.putString(MyFragmentAppDetailCategoryFragment.EXTRA_TARGET_MARKET, "Adult")
+
+            val description = "Kategori ini akan berisi produk - produk Lifestyle"
+
+
+
+            mDetailCategoryFragment.arguments = mBundle
+            mDetailCategoryFragment.description = description
+
+            val mFragmentManager = fragmentManager
+            mFragmentManager?.beginTransaction()?.apply {
+                replace(
+                    R.id.frame_container,
+                    mDetailCategoryFragment,
+                    MyFragmentAppDetailCategoryFragment::class.java.simpleName)
+                    addToBackStack(null)
+                    commit()
+            }
         }
     }
 

@@ -32,8 +32,7 @@ class MyFragmentAppHomeFragment : Fragment(), View.OnClickListener {
                 replace(
                     R.id.frame_container,
                     mCategoryFragment,
-                    MyFragmentAppCategoryFragment::class.java.simpleName
-                )
+                    MyFragmentAppCategoryFragment::class.java.simpleName)
                     addToBackStack(null)
                     commit()
             }
