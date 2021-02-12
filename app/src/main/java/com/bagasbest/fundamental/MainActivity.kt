@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.bagasbest.fundamental.myFragmentApp.MyFragmentAppMainActivity
 import com.bagasbest.fundamental.myIntentApp.MyIntentAppMainActivity
+import com.bagasbest.fundamental.myListView.MyListViewMainActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         my_intent_app.setOnClickListener(this)
         my_fragmet_app.setOnClickListener(this)
+        my_list_view.setOnClickListener(this)
 
     }
 
@@ -28,6 +30,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.my_fragmet_app -> {
                 startActivity(Intent(this, MyFragmentAppMainActivity::class.java))
+            }
+            R.id.my_list_view -> {
+                startActivity(Intent(this, MyListViewMainActivity::class.java))
             }
         }
     }
