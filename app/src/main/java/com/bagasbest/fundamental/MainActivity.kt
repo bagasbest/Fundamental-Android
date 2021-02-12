@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.bagasbest.fundamental.myIntentApp.MyIntentAppMainActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -20,7 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View) {
         when(view.id) {
             R.id.my_intent_app -> {
-                startActivity(Intent(this, MyIntentApp_MainActivity::class.java))
+                startActivity(Intent(this, MyIntentAppMainActivity::class.java))
             }
         }
     }

@@ -1,6 +1,8 @@
 package com.bagasbest.fundamental.myIntentApp
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,6 +13,9 @@ import kotlinx.android.synthetic.main.activity_my_intent_app_main.*
 class MyIntentAppMainActivity : AppCompatActivity(), View.OnClickListener {
 
 
+    companion object {
+        const val REQUEST_CODE = 100
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +24,9 @@ class MyIntentAppMainActivity : AppCompatActivity(), View.OnClickListener {
         btn_move_activity.setOnClickListener(this)
         btn_move_with_data.setOnClickListener(this)
         btn_move_activity_object.setOnClickListener(this)
+        btn_dial_number.setOnClickListener(this)
+        btn_move_for_result_Activity.setOnClickListener(this)
+
 
     }
 
@@ -45,8 +53,31 @@ class MyIntentAppMainActivity : AppCompatActivity(), View.OnClickListener {
                 moveWithObjectIntent.putExtra(MyIntentAppMoveWithObjectActivity.EXTRA_PERSON, person)
                 startActivity(moveWithObjectIntent)
             }
+            R.id.btn_dial_number -> {
+                val phoneNumber = "082289538906"
+                startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber")))
+            }
+            R.id.btn_move_for_result_Activity -> {
+                val moveForResultIntent = Intent(this, MyIntentAppMoveForResultActivity::class.java)
+                startActivityForResult(moveForResultIntent, REQUEST_CODE)
+
+            }
 
         }
     }
+
+    @SuppressLint("SetTextI18n")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if(requestCode == REQUEST_CODE) {
+            if(resultCode == MyIntentAppMoveForResultActivity.RESULT_CODE) {
+                val selectedValue = data?.getIntExtra(MyIntentAppMoveForResultActivity.EXTRA_SELECTED_VALUE, 0)
+                tv_result.text = "Hasil : $selectedValue"
+            }
+        }
+
+    }
+
 }
 
