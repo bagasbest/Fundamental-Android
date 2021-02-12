@@ -14,4 +14,10 @@
        android:layout_height="wrap_content"
        android:text="MyIntentApp" />
 
+   <Button
+       android:id="@+id/my_fragmet_app"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="MyFragmentApp" />
+
 </LinearLayout>
