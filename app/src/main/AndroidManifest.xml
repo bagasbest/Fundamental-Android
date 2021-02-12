@@ -9,7 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Fundamental">
-        <activity android:name=".screens.VolumeCountApp"></activity>
+        <activity android:name=".myIntentApp.MyIntentAppMoveWithObjectActivity"></activity>
+        <activity android:name=".myIntentApp.MyIntentAppMoveWithObject" />
+        <activity android:name=".myIntentApp.model.Person" />
+        <activity android:name=".myIntentApp.MyIntentAppMoveWithDataActivity" />
+        <activity android:name=".myIntentApp.MyIntentAppMoveActivity" />
+        <activity android:name=".myIntentApp.MyIntentAppMainActivity" />
+        <activity android:name=".myIntentApp.MyIntentApp_MainActivity" />
+        <activity android:name=".screens.MoveForResultActivity" />
+        <activity android:name=".screens.IntentWithObjectData" />
+        <activity android:name=".screens.BelajarIntent" />
+        <activity android:name=".screens.IntentWithData" />
+        <activity android:name=".screens.VolumeCountApp" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

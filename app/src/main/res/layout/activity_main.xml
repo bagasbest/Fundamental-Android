@@ -9,9 +9,9 @@
     tools:context=".MainActivity">
 
    <Button
-       android:id="@+id/volumeCountAppBtn"
+       android:id="@+id/my_intent_app"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:text="Volume Count App" />
+       android:text="MyIntentApp" />
 
 </LinearLayout>
