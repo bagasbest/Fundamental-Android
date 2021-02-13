@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Fundamental">
-        <activity android:name=".myListView.MyListViewMainActivity"></activity>
+        <activity android:name=".myTestingApp.MyTestingAppMainActivity"></activity>
+        <activity android:name=".myListView.MyListViewMainActivity" />
         <activity android:name=".myFragmentApp.MyFragmentAappProfileActivity" />
         <activity android:name=".myFragmentApp.MyFragmentAppMainActivity" />
         <activity android:name=".myIntentApp.MyIntentAppMoveForResultActivity" />

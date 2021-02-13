@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bagasbest.fundamental.R
 import com.bagasbest.fundamental.myListView.model.MyListViewHero
 import com.bumptech.glide.Glide
+import de.hdodenhof.circleimageview.CircleImageView
 
 class MyListViewHeroAdapter internal constructor(private val context: Context) : BaseAdapter() {
     internal  var heroes = arrayListOf<MyListViewHero>()
@@ -45,7 +46,7 @@ class MyListViewHeroAdapter internal constructor(private val context: Context) :
     private inner class ViewHolder internal constructor(view: View) {
         private val txtName: TextView = view.findViewById(R.id.txt_name)
         private val txtDescription: TextView = view.findViewById(R.id.txt_description)
-        private val imgPhoto: ImageView = view.findViewById(R.id.img_photo)
+        private val imgPhoto: CircleImageView = view.findViewById(R.id.img_photo)
 
 
 
