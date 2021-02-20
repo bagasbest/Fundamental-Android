@@ -26,4 +26,10 @@
        android:layout_height="wrap_content"
        android:text="MyListView" />
 
+   <Button
+       android:id="@+id/submission1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Submission1" />
+
 </LinearLayout>
