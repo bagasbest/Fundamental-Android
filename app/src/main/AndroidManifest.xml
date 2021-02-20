@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Fundamental">
-        <activity android:name=".submission1.GithubUserDetailActivity"></activity>
+        <activity android:name=".myViewAndViews.MyViewMainActivity"></activity>
+        <activity android:name=".submission1.GithubUserDetailActivity" />
         <activity android:name=".submission1.GithubUserMainActivity" />
         <activity android:name=".myUnitTesting.MyUnitTestingMainActivity" />
         <activity android:name=".myTestingApp.MyTestingAppMainActivity" />
