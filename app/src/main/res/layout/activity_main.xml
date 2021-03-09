@@ -32,4 +32,23 @@
        android:layout_height="wrap_content"
        android:text="Submission1" />
 
+   <Button
+       android:id="@+id/my_navigation"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="MyNavigation" />
+
+   <Button
+       android:id="@+id/my_option_menu"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="MyOptionMenu" />
+
+   <Button
+       android:id="@+id/my_drawer_navigation"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="MyDrawerNavigation" />
+
+
 </LinearLayout>
