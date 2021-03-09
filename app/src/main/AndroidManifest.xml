@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Fundamental">
-        <activity android:name=".myViewAndViews.MyViewMainActivity"></activity>
+        <activity android:name=".myNavigation.ProfileActivity"></activity>
+        <activity android:name=".myNavigation.MyNavigationMainActivity" />
+        <activity android:name=".myViewAndViews.MyViewMainActivity" />
         <activity android:name=".submission1.GithubUserDetailActivity" />
         <activity android:name=".submission1.GithubUserMainActivity" />
         <activity android:name=".myUnitTesting.MyUnitTestingMainActivity" />
@@ -38,6 +40,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <nav-graph android:value="@navigation/main_navigation" />
         </activity>
     </application>
 

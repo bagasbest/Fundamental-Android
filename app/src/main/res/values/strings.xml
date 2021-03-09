@@ -35,6 +35,9 @@
     <string name="target_market">Target market</string>
     <string name="image">image</string>
 
+    <string name="category_sport">Ke fragment Sport</string>
+    <string name="to_home">Ke fragment Home</string>
+
     <string-array name="data_name">
         <item>Ahmad Dahlan</item>
         <item>Ahmad Yani</item>
